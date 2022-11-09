@@ -1,8 +1,18 @@
 package com.devsuperior.userdept.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tb_department")
 public class Department {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    private Department(){
+
+    }
 
     public Long getId() {
         return id;
